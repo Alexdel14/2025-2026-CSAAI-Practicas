@@ -89,7 +89,6 @@ img {
 }
 
 
-
 /* Imágenes responsive dentro de la columna izquierda */
 
 .iresponsive {
@@ -128,7 +127,7 @@ img {
 
 body {
 
-  background: #000;
+  background: #f5f5dc;
 
   font-family: Arial, sans-serif;
 
