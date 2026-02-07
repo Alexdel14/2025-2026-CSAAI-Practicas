@@ -1,99 +1,117 @@
 /* https://www.w3schools.com/howto/howto_css_two_columns.asp */
 /* https://developer.mozilla.org/es/docs/Web/CSS/box-sizing */
 /* Así definimos el comportamiento de caja para todos los elementos */
-body {
-  margin: 0;
-  background: linear-gradient(135deg, #000, #222);
-  font-family: Arial, sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
+/* Crear columnas */
+.columna {
+  float: left;
+  padding: 10px;
+  min-height: 500px;
   color: #fff;
 }
 
-.contenedor {
-  display: flex;
-  width: 95%;
-  margin: 20px auto;
-  border: 3px solid gold;
-  background: rgba(255,255,255,0.05);
+.izquierda {
+width: 25%;
 }
 
-.sidebar {
-  width: 25%;
-  background: #111;
-  padding: 15px;
-  border-right: 3px solid gold;
+.derecha {
+width: 75%;
 }
 
-.foto-box img {
+/* Clear floats */
+.fila:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#c1 {
+    background-color: #111;
+    border: 2px solid gold;
+}
+
+#c2 {
+    background-color: #1f1f1f;
+    border: 2px solid gold;
+}
+
+/* Estilos para imágenes */
+img {
   width: 100%;
-  border: 3px solid gold;
-  border-radius: 10px;
+  height: auto;
+  border-radius: 6px;
 }
 
-.card {
-  border: 2px solid gold;
-  margin-top: 15px;
-  padding: 10px;
-  background: rgba(255,255,255,0.05);
+/* Imágenes responsive dentro de la columna izquierda */
+.iresponsive {
+  padding: 0 6px;
+  float: left;
+  width: 50%;
 }
 
-.card h3 {
-  margin: 0 0 5px;
-  color: gold;
+/* Responsive layout */
+@media screen and (max-width: 600px) {
+  .columna {
+      width: 100%;
+  }
+
+  .iresponsive {
+      width: 100%;
+  }
 }
 
-.redes img {
-  width: 40px;
-  margin: 5px;
+body {
+  background: #000;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
 }
 
-.panel {
-  width: 75%;
-  padding: 15px;
-  background: url("cr7-fondo.png") no-repeat center/cover;
+h2, h3, h4 {
+color: gold;
 }
 
-.titulo {
-  border: 3px solid gold;
-  text-align: center;
-  background: rgba(0,0,0,0.6);
-  margin-bottom: 10px;
+ul {
+  padding-left: 18px;
 }
 
-.titulo h1 {
-  margin: 10px;
-  color: gold;
-  letter-spacing: 3px;
+/* Redes sociales */
+.redes li {
+  list-style: none;
+  margin-bottom: 6px;
+  font-size: 14px;
 }
 
-.bloque {
-  border: 2px solid gold;
-  margin-bottom: 10px;
-  padding: 10px;
-  background: rgba(0,0,0,0.6);
-}
+/* ====== TRAYECTORIA (CLUBES) ====== */
 
-.bloque h2 {
-  margin-top: 0;
-  color: gold;
-}
-
-.referencias {
+.club {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px;
+  border: 1px solid gold;
+  background: #111;
 }
 
-.ref {
-  text-align: center;
+.club img {
+  width: 70px;
+  height: auto;
+  margin-right: 15px;
+  border-radius: 4px;
 }
 
-.ref img {
-  width: 60px;
-  display: block;
-  margin: auto;
+.club-info h4 {
+  margin: 0;
+  color: gold;
 }
 
-.video {
-  border: 2px solid gold;
-  padding: 5px;
-  background: black;
+.club-info p {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: #ddd;
 }
+
