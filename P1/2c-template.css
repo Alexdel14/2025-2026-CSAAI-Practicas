@@ -6,112 +6,118 @@
   box-sizing: border-box;
 }
 
+body {
+  background: #f4f4f4; /* Fondo gris muy claro para que resalten las cajas blancas */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.titulo-principal {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
 /* Crear columnas */
 .columna {
   float: left;
-  padding: 10px;
+  padding: 20px;
   min-height: 500px;
-  color: #fff;
+  color: #333; /* Texto oscuro sobre fondo blanco */
 }
 
 .izquierda {
-width: 25%;
+  width: 30%;
 }
 
 .derecha {
-width: 75%;
+  width: 70%;
 }
-
 /* Clear floats */
+
 .fila:after {
   content: "";
   display: table;
   clear: both;
 }
 
+/* Estilo de las cajas: Fondo Blanco */
 #c1 {
-    background-color: #111;
-    border: 2px solid gold;
+  background-color: #ffffff;
+  border: 2px solid gold;
 }
 
 #c2 {
-    background-color: #1f1f1f;
-    border: 2px solid gold;
+  background-color: #ffffff;
+  border: 2px solid gold;
+  border-left: none; /* Evita doble borde en el medio */
 }
 
-/* Estilos para imágenes */
-img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
+/* Ajuste de la foto de perfil */
+.foto-contenedor {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Imágenes responsive dentro de la columna izquierda */
-.iresponsive {
-  padding: 0 6px;
-  float: left;
-  width: 50%;
+#imgcr7 {
+  width: 150px; /* Tamaño más pequeño */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* Foto circular */
+  border: 3px solid gold;
 }
 
-/* Responsive layout */
-@media screen and (max-width: 600px) {
-  .columna {
-      width: 100%;
-  }
-
-  .iresponsive {
-      width: 100%;
-  }
+.logo-contenedor {
+  width: 80px;
+  margin: 20px auto;
 }
 
-body {
-  background: #000;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-}
-
+/* Estilos de texto */
 h2, h3, h4 {
-color: gold;
+  color: #b8860b; /* Un dorado más oscuro para que se vea bien en blanco */
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
 }
 
 ul {
   padding-left: 18px;
+  list-style-type: none;
 }
 
-/* Redes sociales */
-.redes li {
-  list-style: none;
-  margin-bottom: 6px;
-  font-size: 14px;
+li {
+  margin-bottom: 8px;
 }
 
-/* ====== TRAYECTORIA (CLUBES) ====== */
-
+/* Clubes */
 .club {
   display: flex;
   align-items: center;
   margin-bottom: 12px;
-  padding: 8px;
-  border: 1px solid gold;
-  background: #111;
+  padding: 10px;
+  border: 1px solid #eee;
+  background: #fafafa;
 }
 
 .club img {
-  width: 70px;
+  width: 60px;
   height: auto;
   margin-right: 15px;
-  border-radius: 4px;
-}
-
-.club-info h4 {
-  margin: 0;
-  color: gold;
 }
 
 .club-info p {
-  margin: 2px 0 0;
-  font-size: 14px;
-  color: #ddd;
+  margin: 0;
+  color: #666;
+}
+
+/* Responsive */
+@media screen and (max-width: 800px) {
+  .izquierda, .derecha {
+      width: 100%;
+  }
+  #c2 {
+      border-left: 2px solid gold;
+      margin-top: 10px;
+  }
 }
 
