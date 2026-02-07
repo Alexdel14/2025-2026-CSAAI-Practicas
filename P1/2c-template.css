@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #e0e0e0; /* Fondo gris muy claro para que resalten las cajas blancas */
+  background: #fff8e7; /* Fondo gris muy claro para que resalten las cajas blancas */
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
@@ -32,9 +32,8 @@ body {
 }
 
 .derecha {
-  width: 75%;
+  width: 70%;
 }
-/* Clear floats */
 
 .fila:after {
   content: "";
@@ -44,12 +43,12 @@ body {
 
 /* Estilo de las cajas: Fondo Blanco */
 #c1 {
-  background-color: #ffffff;
+  background-color: #fff8e7;
   border: 2px solid gold;
 }
 
 #c2 {
-  background-color: #ffffff;
+  background-color: #fff8e7;
   border: 2px solid gold;
   border-left: none; /* Evita doble borde en el medio */
 }
@@ -61,8 +60,8 @@ body {
 }
 
 #imgcr7 {
-  width: 120px; /* Tamaño más pequeño */
-  height: 120px;
+  width: 150px; /* Tamaño más pequeño */
+  height: 150px;
   object-fit: cover;
   border-radius: 50%; /* Foto circular */
   border: 3px solid gold;
@@ -93,16 +92,16 @@ li {
 .club {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
-  padding: 5px 10px;
-  border: 1px solid #f0f0f0;
-  background: #fdfdfd;
+  margin-bottom: 12px;
+  padding: 10px;
+  border: 1px solid #eee;
+  background: #fff8e7;
 }
 
 .club img {
-  width: 40%;
+  width: 60px;
   height: auto;
-  margin-right: 12px;
+  margin-right: 15px;
 }
 
 .club-info p {
@@ -120,4 +119,3 @@ li {
       margin-top: 10px;
   }
 }
-
