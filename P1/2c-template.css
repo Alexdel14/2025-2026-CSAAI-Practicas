@@ -1,65 +1,99 @@
 /* https://www.w3schools.com/howto/howto_css_two_columns.asp */
 /* https://developer.mozilla.org/es/docs/Web/CSS/box-sizing */
 /* Así definimos el comportamiento de caja para todos los elementos */
-* {
-    box-sizing: border-box;
-  }
-  
-/* Crear columnas de ancho diferente que se colocan una a continuación de la otra */
-.columna {
-float: left;
-padding: 10px;
-min-height: 500px;
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #000, #222);
+  font-family: Arial, sans-serif;
+  color: #fff;
 }
 
-.izquierda {
-width: 25%;
+.contenedor {
+  display: flex;
+  width: 95%;
+  margin: 20px auto;
+  border: 3px solid gold;
+  background: rgba(255,255,255,0.05);
 }
 
-.derecha {
-width: 75%;
+.sidebar {
+  width: 25%;
+  background: #111;
+  padding: 15px;
+  border-right: 3px solid gold;
 }
 
-/* Clear floats despues de las columnas para eliminar la superposición */
-.filla:after {
-content: "";
-display: table;
-clear: both;
+.foto-box img {
+  width: 100%;
+  border: 3px solid gold;
+  border-radius: 10px;
 }
 
-#c1 {
-    background-color:#aaa;
+.card {
+  border: 2px solid gold;
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(255,255,255,0.05);
 }
 
-#c2 {
-    background-color:#bbb;
+.card h3 {
+  margin: 0 0 5px;
+  color: gold;
 }
 
-/* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
-/* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
-
-img {
-    width: 100%;
-    height: auto;
+.redes img {
+  width: 40px;
+  margin: 5px;
 }
 
-.iresponsive {
-    padding: 0 6px;
-    float: left;
-    width: 50%;
-  }
-
-/* Responsive layout - cuando el ancho de pantalla es menor a 600px, muestra las columnas apiladas. */
-/* Así conseguimos que el contenido se vea bien en dispositvos móviles */
-
-@media screen and (max-width: 600px) {
-    .columna {
-      width: 100%;
-    }
-
-    .iresponsive {
-        width: 100%;
-    }
+.panel {
+  width: 75%;
+  padding: 15px;
+  background: url("cr7-fondo.png") no-repeat center/cover;
 }
 
-/* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
+.titulo {
+  border: 3px solid gold;
+  text-align: center;
+  background: rgba(0,0,0,0.6);
+  margin-bottom: 10px;
+}
+
+.titulo h1 {
+  margin: 10px;
+  color: gold;
+  letter-spacing: 3px;
+}
+
+.bloque {
+  border: 2px solid gold;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: rgba(0,0,0,0.6);
+}
+
+.bloque h2 {
+  margin-top: 0;
+  color: gold;
+}
+
+.referencias {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ref {
+  text-align: center;
+}
+
+.ref img {
+  width: 60px;
+  display: block;
+  margin: auto;
+}
+
+.video {
+  border: 2px solid gold;
+  padding: 5px;
+  background: black;
+}

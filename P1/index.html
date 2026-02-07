@@ -1,51 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Dos columnas</title>
-
-   <!-- Hoja de estilo -->
-   <link rel="stylesheet" href="2c-template.css">    
-
+    <title>CV Cristiano Ronaldo</title>
+    <link rel="stylesheet" href="cr7-estilo.css">
 </head>
 <body>
-    
-    <h2>Diseño de plantilla a dos columnas</h2>
 
-    <div class="fila">
-      <div id="c1" class="columna izquierda">
-        <h2>Columna Izquierda</h2>
+<div class="contenedor">
 
-        <div class="iresponsive">
-            <img id="imghtml" src="html5.png" alt="html5" width="200" height="200">
+    <!-- COLUMNA IZQUIERDA -->
+    <aside class="sidebar">
+        <div class="foto-box">
+            <img src="cr7-perfil.jpg" alt="Cristiano Ronaldo">
         </div>
 
-        <div class="iresponsive">
-            <img id="imgcss" src="css.png" alt="css" width="200" height="200">
-        </div>
+        <section class="card">
+            <h3>Datos personales</h3>
+            <p>=Þ +351 912 345 678</p>
+            <p>< 5 Febrero 1985</p>
+            <p>=Í Funchal, Madeira</p>
+            <p><
+ Portugal</p>
+            <p>< cristianoronaldo.com</p>
+        </section>
 
-        <p>Senserit mediocrem vis ex, et dicunt deleniti gubergren mei. Mel id clita mollis repudiare. 
-            Sed ad nostro delicatissimi, postea pertinax est an. Adhuc sensibus percipitur sed te, 
-            eirmod tritani debitis nec ea. Cu vis quis gubergren.
-        </p>
-        <ul>
-            <li>Contacto</li>
-            <li>Formación</li>
-            <li>Experiencia</li>
-            <li>Acerca de</li>
-        </ul>
-      </div>
-      <div id="c2" class="columna derecha">
-        <h2>Columna Derecha</h2>
-        <img src="web-tech.png" alt="Tecnologías web">
-        <p>Senserit mediocrem vis ex, et dicunt deleniti gubergren mei. Mel id clita mollis repudiare. 
-            Sed ad nostro delicatissimi, postea pertinax est an. Adhuc sensibus percipitur sed te, 
-            eirmod tritani debitis nec ea. Cu vis quis gubergren.
-        </p>
-      </div>
-    </div>
+        <section class="card">
+            <h3>Estudios</h3>
+            <p>" Academia Sporting CP</p>
+            <p>" Formación Profesional UEFA</p>
+        </section>
+
+        <section class="card">
+            <h3>Experiencia</h3>
+            <p>" Al-Nassr FC</p>
+            <p>" Manchester United</p>
+            <p>" Juventus</p>
+            <p>" Real Madrid</p>
+        </section>
+
+        <section class="card">
+            <h3>Redes</h3>
+            <div class="redes">
+                <img src="icon-instagram.png">
+                <img src="icon-x.png">
+                <img src="icon-youtube.png">
+            </div>
+        </section>
+    </aside>
+
+    <!-- PANEL DERECHO -->
+    <main class="panel">
+
+        <header class="titulo">
+            <h1>CRISTIANO RONALDO</h1>
+        </header>
+
+        <section class="bloque">
+            <h2>Quién soy</h2>
+            <p>
+                Futbolista profesional considerado uno de los mejores de la historia.
+                Destaco por mi ética de trabajo, liderazgo y mentalidad ganadora.
+            </p>
+        </section>
+
+        <section class="bloque">
+            <h2>Sobre mí</h2>
+            <p>
+                Atleta de alto rendimiento, récord goleador en múltiples ligas y competiciones.
+                Apasionado por el deporte, la disciplina y la superación constante.
+            </p>
+        </section>
+
+        <section class="bloque">
+            <h2>Referencias</h2>
+            <div class="referencias">
+                <div class="ref">
+                    <img src="real-madrid.png">
+                    <p>Real Madrid</p>
+                </div>
+                <div class="ref">
+                    <img src="man-utd.png">
+                    <p>Manchester United</p>
+                </div>
+                <div class="ref">
+                    <img src="juventus.png">
+                    <p>Juventus</p>
+                </div>
+                <div class="ref">
+                    <img src="alnassr.png">
+                    <p>Al-Nassr</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bloque">
+            <h2>Video destacado</h2>
+            <div class="video">
+                <iframe width="100%" height="250"
+                    src="https://www.youtube.com/embed/OUKGsb8CpF8"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+</div>
 
 </body>
 </html>
