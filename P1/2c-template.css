@@ -336,3 +336,30 @@ ul {
   border-radius: 50%;
   border: 3px solid gold;
 }
+
+/* Página About*/
+
+.about-container {
+  max-width: 800px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.about-text {
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+}
+
+.about-img {
+  width: 130px;
+  border-radius: 50%;
+  border: 4px solid gold;
+  margin-top: 20px;
+}
