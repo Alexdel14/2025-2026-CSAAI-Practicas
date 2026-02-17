@@ -313,3 +313,12 @@ ul {
   background-color: #fff;
 }
 
+
+.about-img {
+  width: 110px;  
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+  border: 3px solid gold;
+}
