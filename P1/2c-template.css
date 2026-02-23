@@ -396,7 +396,7 @@ ul {
   margin-top: 60px;
 }
 
-.btn-volver {
+a.btn-volver {
   display: inline-block;
   padding: 12px 25px;
   background: linear-gradient(145deg, gold, #d4af37);
@@ -408,7 +408,7 @@ ul {
   transition: all 0.3s ease;
 }
 
-.btn-volver:hover {
+a.btn-volver:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 25px rgba(255, 215, 0, 0.6);
   background: white;
