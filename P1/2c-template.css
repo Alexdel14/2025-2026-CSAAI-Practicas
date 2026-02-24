@@ -219,7 +219,7 @@ ul {
 
 
 
-.club-info h4 {
+.club-info h3 {
 
   margin: 0;
 
@@ -299,7 +299,7 @@ ul {
 }
 
 .card {
-  background-color: linear-gradient(145deg, #111, #000);
+  background-color: #1f1f1f;
   border: 2px solid gold;
   border-radius: 15px;
   padding: 30px;
