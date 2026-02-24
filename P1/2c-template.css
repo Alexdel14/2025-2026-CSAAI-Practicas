@@ -334,9 +334,9 @@ ul {
 /* Apartado About*/
 
 .about-container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 30px auto;
-  text-align: center;
+  
   padding: 20px;
 }
 
@@ -361,19 +361,20 @@ ul {
 
 .about-content {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
+  gap: 50px;
+  margin-top: 50px;
   flex-wrap: wrap;
 }
 
 .about-side-img {
   width: 200px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 3px solid gold;
   box-shadow: 0 8px 20px rgba(0,0,0,0.8);
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .about-side-img:hover {
@@ -385,6 +386,7 @@ ul {
   font-size: 18px;
   line-height: 1.6;
   color: white;
+  text-align: center;
 }
 
 
