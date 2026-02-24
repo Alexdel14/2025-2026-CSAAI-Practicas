@@ -357,7 +357,35 @@ ul {
   border: 4px solid gold;
   margin-top: 20px;
 }
+/* ===== ABOUT LAYOUT CON IMÁGENES ===== */
 
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.about-side-img {
+  width: 200px;
+  border-radius: 10px;
+  border: 3px solid gold;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+  transition: transform 0.3s ease;
+}
+
+.about-side-img:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  max-width: 550px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+}
 
 
 /*Video*/
