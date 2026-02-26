@@ -126,7 +126,7 @@ img {
 
 
 body {
-  background: linear-gradient(135deg, #000000, #1a1a1a);
+  background: linear-gradient(135deg, #000000 40%, #d4af37 100%);
 
   font-family: Arial, sans-serif;
 
@@ -293,7 +293,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 80px;
   flex-wrap: wrap;
   margin-top: 60px;
 }
@@ -303,11 +303,12 @@ ul {
   border: 2px solid gold;
   border-radius: 15px;
   padding: 30px;
-  width: 360px;
+  width: 380px;
   min-height: 280px;
   box-shadow: 0 8px 10px rgba(0,0,0,0.8);
   color: #fff;
   text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .card h3 {
@@ -327,6 +328,7 @@ ul {
 
 .card a:hover {
   background-color: #fff;
+  transform: scale(1.05);
 }
 
 
@@ -336,7 +338,7 @@ ul {
 .about-container {
   max-width: 1400px;
   margin: 30px auto;
-  padding: 20px;
+  
 }
 
 .about-text {
