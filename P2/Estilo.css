@@ -1,0 +1,91 @@
+body{
+background:black;
+color:#00ff55;
+font-family:monospace;
+text-align:center;
+}
+
+h1{
+letter-spacing:12px;
+margin-bottom:30px;
+}
+
+.game{
+border:2px solid #00ff55;
+padding:20px;
+max-width:450px;
+margin:auto;
+}
+
+.secret{
+display:flex;
+justify-content:space-between;
+margin-bottom:20px;
+}
+
+.box{
+border:2px solid #00ff55;
+width:80px;
+height:50px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+color:red;
+}
+
+.correct{
+color:#00ff55;
+}
+
+.lose{
+color:red;
+border-color:red;
+}
+
+.timer{
+font-size:40px;
+margin:20px 0;
+}
+
+.numbers{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+margin:20px 0;
+}
+
+button{
+background:black;
+color:#00ff55;
+border:2px solid #00ff55;
+padding:15px;
+font-size:20px;
+cursor:pointer;
+}
+
+button:disabled{
+opacity:0.3;
+cursor:not-allowed;
+}
+
+.controls{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+}
+
+.controls button{
+color:red;
+border:2px solid red;
+font-weight:bold;
+}
+
+.controls button:hover{
+background:red;
+color:black;
+}
+
+#message{
+margin-top:15px;
+}
