@@ -59,6 +59,6 @@ class Crono {
         this.seg = 0;
         this.min = 0;
 
-        this.display.innerHTML = "0:0:0";
+        this.display.innerHTML = "0:00:00";
     }
 }

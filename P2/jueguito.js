@@ -2,6 +2,8 @@ let secret=[]
 let maxAttempts=7
 let used=0
 
+let gamesPlayed=0   // partidas jugadas
+
 let crono
 
 window.onload = function(){
@@ -110,7 +112,10 @@ if(discovered==4){
 crono.stop()
 
 document.getElementById("message").textContent =
-`🎉 ENHORABUENA! Descubriste la clave. Tiempo usado: ${document.getElementById("time").innerText} | Intentos gastados: ${used}`
+`🎉 ENHORABUENA! Descubriste la clave. 
+Tiempo usado: ${document.getElementById("time").innerText} 
+Intentos gastados: ${used} 
+Partidas necesarias para ganar: ${gamesPlayed}`
 
 disableButtons()
 
@@ -132,7 +137,7 @@ box.classList.add("lose")
 }
 
 document.getElementById("message").textContent =
-`💥 PERDISTE. Tiempo utilizado: ${document.getElementById("time").innerText}.| Intentos gastados: ${used} | Inténtalo en la próxima.`
+`💥 PERDISTE. Tiempo utilizado: ${document.getElementById("time").innerText}. Inténtalo en la próxima.`
 
 disableButtons()
 
@@ -154,6 +159,7 @@ crono.stop()
 crono.reset()
 
 used=0
+gamesPlayed++   // aumenta el número de partidas
 
 document.getElementById("used").textContent=0
 document.getElementById("left").textContent=7
