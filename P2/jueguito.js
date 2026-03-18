@@ -111,6 +111,8 @@ if(discovered==4){
 
 crono.stop()
 
+
+
 document.getElementById("message").textContent =
 `🎉 ENHORABUENA! Descubriste la clave. 
 Tiempo usado: ${document.getElementById("time").innerText} 
@@ -124,6 +126,8 @@ disableButtons()
 if(used>=maxAttempts && discovered<4){
 
 crono.stop()
+
+explosion()
 
 for(let i=0;i<4;i++){
 
@@ -150,6 +154,20 @@ function disableButtons(){
 for(let i=0;i<=9;i++){
 document.getElementById("b"+i).disabled=true
 }
+
+}
+
+function explosion(){
+
+let boom=document.createElement("div")
+boom.classList.add("explosion")
+boom.textContent="💥"
+
+document.body.appendChild(boom)
+
+setTimeout(()=>{
+boom.remove()
+},600)
 
 }
 
