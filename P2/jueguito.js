@@ -111,7 +111,7 @@ if(discovered==4){
 
 crono.stop()
 
-
+celebrate()
 
 document.getElementById("message").textContent =
 `🎉 ENHORABUENA! Descubriste la clave. 
@@ -168,6 +168,32 @@ document.body.appendChild(boom)
 setTimeout(()=>{
 boom.remove()
 },600)
+
+}
+
+function celebrate(){
+
+let container=document.createElement("div")
+container.classList.add("celebration")
+
+for(let i=0;i<40;i++){
+
+let confetti=document.createElement("div")
+confetti.classList.add("confetti")
+
+confetti.style.left=Math.random()*100+"%"
+confetti.style.background = ["#00ccff","#ffffff","#00ffaa","#ffcc00"][Math.floor(Math.random()*4)]
+confetti.style.animationDuration = (0.5 + Math.random())+"s"
+
+container.appendChild(confetti)
+
+}
+
+document.body.appendChild(container)
+
+setTimeout(()=>{
+container.remove()
+},2500)
 
 }
 

@@ -124,3 +124,32 @@ transform:translate(-50%,-50%) scale(2.5);
 opacity:0;
 }
 }
+
+.celebration{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.confetti{
+position:absolute;
+width:10px;
+height:10px;
+background:#00ccff;
+animation:fall 2.5s linear forwards;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-10px) rotate(0deg);
+opacity:1;
+}
+100%{
+transform:translateY(100vh) rotate(360deg);
+opacity:0;
+}
+}
