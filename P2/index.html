@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOOM</title>
+<link rel="stylesheet" href="Estilo.css">
+</head>
+
+<body>
+
+<h1>BOOM</h1>
+
+<div class="game">
+
+<div class="secret">
+<div class="box" id="d0">*</div>
+<div class="box" id="d1">*</div>
+<div class="box" id="d2">*</div>
+<div class="box" id="d3">*</div>
+</div>
+
+<div class="timer" id="time">0:0:0</div>
+
+<div class="info">
+<p>Intentos usados: <span id="used">0</span></p>
+<p>Intentos restantes: <span id="left">7</span></p>
+</div>
+
+<p id="message">Nueva partida preparada. Pulsa Start o un número para comenzar.</p>
+
+<div class="numbers">
+
+<button onclick="play(7)" id="b7">7</button>
+<button onclick="play(8)" id="b8">8</button>
+<button onclick="play(9)" id="b9">9</button>
+
+<button onclick="play(4)" id="b4">4</button>
+<button onclick="play(5)" id="b5">5</button>
+<button onclick="play(6)" id="b6">6</button>
+
+<button onclick="play(1)" id="b1">1</button>
+<button onclick="play(2)" id="b2">2</button>
+<button onclick="play(3)" id="b3">3</button>
+
+<div></div>
+<button onclick="play(0)" id="b0">0</button>
+<div></div>
+
+</div>
+
+<div class="controls">
+<button onclick="startGame()">Start</button>
+<button onclick="stopGame()">Stop</button>
+<button onclick="resetGame()">Reset</button>
+</div>
+
+</div>
+
+<script src="crono.js"></script>
+<script src="jueguito.js"></script>
+
+</body>
+</html>
