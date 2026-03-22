@@ -241,14 +241,22 @@ function update() {
         if (e.frame > 20) explosions.splice(i, 1);
     });
 
-    if (player.lives <= 0) gameState = "gameover";
-    if (aliens.length === 0) gameState = "win";
-}
+    
+    aliens.forEach(a => {
+        if (a.y + a.height >= player.y) {
+            gameState = "gameover";
+        }
+    });
+
+        if (player.lives <= 0) gameState = "gameover";
+        if (aliens.length === 0) gameState = "win";
+    }
 
 
 
 // ================= DRAW =================
 function draw() {
+    
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // estrellas
@@ -321,6 +329,8 @@ function draw() {
             ctx.fillText("ENHORABUENA", canvas.width / 2, canvas.height / 2);
             ctx.fillText("HAS GANADO", canvas.width / 2, canvas.height / 2 + 50);
         }
+
+        ctx.textAlign = "left";
     }
 }
 
