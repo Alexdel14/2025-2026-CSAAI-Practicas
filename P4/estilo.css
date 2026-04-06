@@ -8,12 +8,14 @@ body {
   background: linear-gradient(135deg, #c8f7c5, #6ecf9f);
 }
 
+/* APP */
 .app {
   max-width: 900px;
   margin: auto;
   padding: 20px;
 }
 
+/* HEADER */
 .header {
   display: flex;
   justify-content: space-between;
@@ -47,6 +49,7 @@ body {
   opacity: 0.6;
 }
 
+/* CONTROLES */
 .controls {
   margin: 15px 0;
   display: flex;
@@ -62,12 +65,14 @@ body {
   cursor: pointer;
 }
 
+/* MAIN */
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* MENSAJE */
 .message-box {
   background: white;
   padding: 20px;
@@ -76,6 +81,7 @@ body {
   margin-bottom: 20px;
 }
 
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 90px);
@@ -91,7 +97,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: 0.2s;
+  transition: 0.15s;
 }
 
 .cell span {
@@ -99,8 +105,40 @@ body {
   margin-top: 5px;
 }
 
+/* 🔥 EFECTO TIKTOK */
 .cell.active {
-  background: #ffeb3b;
-  transform: scale(1.15);
-  box-shadow: 0 0 20px rgba(255, 235, 59, 0.8);
+  animation: beat 0.25s ease;
+  background: #fff176;
+  box-shadow: 0 0 25px rgba(255,255,0,0.9);
+}
+
+/* ANIMACIÓN BEAT */
+@keyframes beat {
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+
+  40% {
+    transform: scale(1.3);
+    filter: brightness(2);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* FLASH GLOBAL */
+.flash {
+  animation: flashScreen 0.15s;
+}
+
+@keyframes flashScreen {
+  0% { background: white; }
+  100% { background: transparent; }
 }

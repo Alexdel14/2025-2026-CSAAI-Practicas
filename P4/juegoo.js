@@ -16,7 +16,7 @@ let cells = [];
 let gameRunning = false;
 let timer = 0;
 let interval;
-let speed = 600;
+let speed = 500;
 let musicOn = true;
 
 /* PAREJAS */
@@ -55,7 +55,6 @@ function createGrid() {
 /* NIVEL */
 function getLevelData(level) {
   const pair = pairs[pairSelect.value];
-
   let arr = [...Array(4).fill(pair[0]), ...Array(4).fill(pair[1])];
 
   if (level === 1) return arr;
@@ -86,6 +85,8 @@ async function runSequence(level) {
     if (!gameRunning) return;
 
     cells[i].classList.add("active");
+    document.body.classList.add("flash");
+
     message.textContent = data[i].text;
 
     tick.currentTime = 0;
@@ -94,6 +95,7 @@ async function runSequence(level) {
     await sleep(speed);
 
     cells[i].classList.remove("active");
+    document.body.classList.remove("flash");
   }
 }
 
@@ -120,9 +122,9 @@ async function startGame() {
 
     levelSpan.textContent = `${lvl}/5`;
     message.textContent = "Prepárate...";
-    await sleep(1000);
+    await sleep(800);
 
-    speed = 700 - (lvl * 100);
+    speed = 500 - (lvl * 60);
 
     await runSequence(lvl);
   }
