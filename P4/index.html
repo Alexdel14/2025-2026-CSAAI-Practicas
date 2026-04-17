@@ -7,27 +7,21 @@
 </head>
 <body>
 
-<div class="app">
+<div class="container">
 
-  <!-- HEADER -->
-  <div class="header">
-    <div>
-      <h1>Beat The Word</h1>
-      <p class="subtitle">Sigue la secuencia al ritmo del Beat</p>
-    </div>
+  <!-- CONFIG -->
+  <div class="sidebar">
+    <h3>Configuración</h3>
 
-    <div class="status-box">
-      <div><span>Nivel</span><strong id="level">1/5</strong></div>
-      <div><span>Tiempo</span><strong id="time">0.0s</strong></div>
-      <div><span>Estado</span><strong id="status">En espera</strong></div>
-    </div>
-  </div>
+    <label>Secuencia</label>
+    <select id="pairSelect">
+      <option value="casa">Casa / Cama</option>
+      <option value="pato">Pato / Gato</option>
+      <option value="queso">Queso / Beso</option>
+      <option value="luna">Luna / Cuna</option>
+    </select>
 
-  <!-- CONTROLES -->
-  <div class="controls">
-    <button id="startBtn">▶</button>
-    <button id="stopBtn">⏹</button>
-
+    <label>Nivel inicial</label>
     <select id="levelSelect">
       <option value="1">Nivel 1</option>
       <option value="2">Nivel 2</option>
@@ -36,26 +30,40 @@
       <option value="5">Nivel 5</option>
     </select>
 
-    <select id="pairSelect">
-      <option value="casa">Casa / Cama</option>
-      <option value="pato">Pato / Gato</option>
-      <option value="queso">Queso / Beso</option>
-      <option value="luna">Luna / Cuna</option>
-    </select>
+    <label>
+      VAR 🎤
+      <input type="checkbox" id="varMode">
+    </label>
 
-    <button id="musicToggleBtn">🎵 Música ON</button>
+    <button id="musicBtn">🎵 Música ON</button>
   </div>
 
   <!-- MAIN -->
   <div class="main">
-    <div class="message-box" id="message">Pulsa comenzar</div>
+
+    <h1>Beat The Word</h1>
+
+    <div class="info">
+      Nivel: <span id="level">1/5</span> |
+      Tiempo: <span id="time">0.0s</span> |
+      Estado: <span id="status">En espera</span>
+    </div>
+
+    <div class="controls">
+      <button id="startBtn">▶</button>
+      <button id="stopBtn">⏹</button>
+    </div>
+
+    <div id="message">Pulsa comenzar</div>
+
     <div class="grid" id="grid"></div>
+
   </div>
 
 </div>
 
-<audio id="music" src="extracted-audio.wav" loop></audio>
 <audio id="tick" src="tick.mp3"></audio>
+<audio id="music" src="extracted-audio.wav" loop></audio>
 
 <script src="juegoo.js"></script>
 </body>
