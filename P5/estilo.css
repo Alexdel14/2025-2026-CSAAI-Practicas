@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  background: #2b2b2b;
+  color: white;
+  font-family: Arial;
+}
+
+canvas {
+  display: none;
+  margin: auto;
+  background: #3c8d2f;
+  border: 5px solid #222;
+}
+
+#menu {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+}
+
+#ui {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+#controls {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+}
+
+#endScreen {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  animation: pop 1s infinite alternate;
+}
+
+@keyframes pop {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
+
+.hidden {
+  display: none;
+}
+
+/* móvil */
+#mobileControls {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#mobileControls button {
+  width: 60px;
+  height: 60px;
+}
