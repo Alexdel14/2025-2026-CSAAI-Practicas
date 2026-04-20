@@ -23,7 +23,7 @@ let speed = 500;
 let musicOn = true;
 let isPlayingRecording = false;
 
-/* 🎤 GRABACIÓN */
+
 let mediaRecorder;
 let audioChunks = [];
 
@@ -59,7 +59,7 @@ function render(data){
   });
 }
 
-/* 🎤 GRABAR */
+
 async function startRecording(){
   const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
   mediaRecorder = new MediaRecorder(stream);
@@ -83,7 +83,7 @@ function stopRecording(){
   };
 }
 
-/* SECUENCIA */
+
 async function runLevel(level){
   let data=getData(level);
   render(data);
@@ -103,9 +103,9 @@ async function runLevel(level){
   }
 }
 
-/* START */
+
 async function startGame(){
-  if(isPlayingRecording) return; // 🔒 bloqueo
+  if(isPlayingRecording) return; 
 
   gameRunning=true;
   timer=0;
@@ -132,7 +132,7 @@ async function startGame(){
   endGame();
 }
 
-/* STOP */
+
 function stopGame(){
   gameRunning=false;
   clearInterval(interval);
@@ -141,7 +141,7 @@ function stopGame(){
   music.pause();
 }
 
-/* END */
+
 function endGame(){
   gameRunning=false;
   clearInterval(interval);
@@ -152,7 +152,7 @@ function endGame(){
   if(varMode.checked) stopRecording();
 }
 
-/* MÚSICA */
+
 musicBtn.onclick = () => {
   musicOn=!musicOn;
   musicBtn.textContent = musicOn ? "🎵 Música ON" : "🔇 Música OFF";
