@@ -6,7 +6,6 @@ body {
   overflow: hidden;
 }
 
-/* estrellas */
 body::before {
   content: "";
   position: fixed;

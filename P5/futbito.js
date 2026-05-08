@@ -24,7 +24,7 @@ document.addEventListener("keydown", e => {
   if (e.code === "Space") e.preventDefault();
 });
 
-// jugadores separados correctamente
+
 const player = { x:120,y:250,r:15,speed:3 };
 const mate   = { x:200,y:350,r:15,speed:2 };
 
@@ -88,7 +88,7 @@ function update(){
   ai(enemy1,false);
   ai(enemy2,false);
   moveBall();
-  playerCollisions(); // 🔥 nuevo
+  playerCollisions(); 
   checkGoal();
 }
 
@@ -138,7 +138,7 @@ function ai(p,ally){
   }
 }
 
-// 💥 colisiones entre jugadores (NO se superponen)
+
 function playerCollisions(){
   for(let i=0;i<players.length;i++){
     for(let j=i+1;j<players.length;j++){
