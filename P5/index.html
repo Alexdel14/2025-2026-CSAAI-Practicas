@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Neon Bot League</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div id="menu">
+  <h1>FUTURE LEAGUE</h1>
+  <button onclick="startGame('3')">A 3 goles</button>
+  <button onclick="startGame('golden')">Gol de oro</button>
+</div>
+
+<canvas id="gameCanvas"></canvas>
+
+<div id="ui">
+  <div id="score">0 - 0</div>
+</div>
+
+<div id="controls">
+  <button onclick="togglePause()">⏸</button>
+  <button onclick="restart()">🔄</button>
+  <button onclick="goMenu()">🏠</button>
+</div>
+
+<div id="overlayText"></div>
+
+<script src="futbito.js"></script>
+</body>
+</html>
